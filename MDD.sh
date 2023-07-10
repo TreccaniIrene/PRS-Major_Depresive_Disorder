@@ -85,7 +85,7 @@ plink --bfile target \
 #####################################
 
 # Download and unzipping the reference genome file
-wget ftp://ftp.ncbi.nih.gov/snp/organisms/human_9606_b151_GRCh37p13/VCF/All_20180423.vcf.gz
+wget https://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.primary_assembly.fa.gz
 gunzip Homo_sapiens.GRCh37.dna.primary_assembly.fa.gz
 
 # Converting the PLINK binary files to VCF format
@@ -236,9 +236,9 @@ plink --bfile $path_dataset1/merge
 #####################################
 
 # Downloading required files 
-wget https://www.dropbox.com/s/y6ytfoybz48dc0u/all_phase3.pgen.zst?dl=1
-wget https://www.dropbox.com/s/odlexvo8fummcvt/all_phase3.pvar.zst?dl=1
-wget https://www.dropbox.com/s/6ppo144ikdzery5/phase3_corrected.psam?dl=1
+wget https://www.dropbox.com/s/y6ytfoybz48dc0u/all_phase3.pgen.zst
+wget https://www.dropbox.com/s/odlexvo8fummcvt/all_phase3.pvar.zst
+wget https://www.dropbox.com/s/6ppo144ikdzery5/phase3_corrected.psam
       
 # Decompressing the downloaded files using PLINK2
 plink2 --zst-decompress all_phase3.pgen.zst > all_phase3.pgen
