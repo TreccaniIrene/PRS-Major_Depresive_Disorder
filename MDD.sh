@@ -388,7 +388,7 @@ Rscript clumping.data.R
 
 plink --bfile final.data \
       --clump-p1 1 \
-      --clump-r2 0.1 \
+      --clump-r2 0.5 \
       --clump-kb 250 \
       --clump BaseDataset \
       --clump-snp-field SNP \
