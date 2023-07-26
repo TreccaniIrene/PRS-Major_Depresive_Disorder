@@ -43,4 +43,4 @@ for(i in p.threshold){
 # Best result is:
 prs.result[ which.max( prs.result$R2 ), ]
 write.table( prs.result[ which.max ( prs.result$R2 ), ], "result.txt",row.names = F, col.names = T, quote = F, sep = "\t") 
-write.table( prs.result,  "Clumping.prs.result.txt", row.names = F, col.names = T, quote = F,sep ="\t") 
+write.table( prs.result,  "plink.prs.result.txt", row.names = F, col.names = T, quote = F,sep ="\t") 
