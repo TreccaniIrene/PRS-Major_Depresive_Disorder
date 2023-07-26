@@ -397,7 +397,7 @@ plink --bfile final.data \
       
 awk 'NR!=1{print $3}' clumping.clumped >  clumping.valid.snp
 
-# Generate PRS
+# range labels in the first column, p-value lower bounds in the second column, and upper bounds in the third column
 awk '{print $2,$12}'  BaseDataset > SNP.pvalue
 echo "0.001 0 0.001" > range_list 
 echo "0.01 0 0.01" >> range_list
@@ -411,11 +411,12 @@ echo "0.3 0 0.3" >> range_list
 echo "0.4 0 0.4" >> range_list
 echo "0.5 0 0.5" >> range_list
 
+# Command to calculate PRS 
 plink --bfile final.data \
       --score BaseDataset 2 4 15 header \
       --q-score-range range_list SNP.pvalue \
       --extract clumping.valid.snp \
-      --out clumping
+      --out prs.plink
 
 # Clumping and print the best result
 Rscript clumping.fit.R
