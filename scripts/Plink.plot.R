@@ -7,7 +7,7 @@ phen <- read.table( "phenotype.phen", header = T)
 
 # Rename the phen
 phen$Phenotype <- as.factor(phen$Phenotype)
-levels(phen$Phenotype) <- c("sano", "malato")
+levels(phen$Phenotype) <- c("healthy", "diseased")
 
 # Merge the files
 dat <- merge(prs, phen, by = "IID")
