@@ -2,7 +2,7 @@ library(ggplot2)
 library(magrittr)
 
 # Read in the files
-prs <- read.table("clumping.0.02.profile",  header = T)
+prs <- read.table("clumping.0.03.profile",  header = T)
 phen <- read.table( "phenotype.phen", header = T)
 
 # Rename the phen
